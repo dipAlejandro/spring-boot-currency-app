@@ -1,6 +1,6 @@
 # Ignorar los directorios y archivos generados por Maven
 /target/
-/mvnw
+#/mvnw
 .mvn/
 
 # Archivos y directorios de entornos de desarrollo
