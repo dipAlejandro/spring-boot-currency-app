@@ -1,0 +1,34 @@
+# Ignorar los directorios y archivos generados por Maven
+/target/
+/mvnw
+.mvn/
+
+# Archivos y directorios de entornos de desarrollo
+/.idea/
+/*.iws
+/*.iml
+/*.ipr
+/.project
+/.classpath
+/.settings/
+/.sts4-cache/
+/.nb-gradle/
+/dist/
+/nbbuild/
+/nbdist/
+/nbproject/private/
+/build/
+/.vscode/
+/springBeans
+
+# Archivos de configuración de compilación automática
+*.class
+*.log
+*.tmp
+*.bak
+
+# Archivos personales o temporales
+/HELP.md
+/dev-docs/
+/nbactions.xml
+/nb-configuration.xml
