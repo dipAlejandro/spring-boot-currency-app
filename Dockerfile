@@ -23,7 +23,7 @@ FROM amazoncorretto:21-alpine-jdk
 WORKDIR /app
 
 # Copiar el JAR generado desde la etapa de construcción
-COPY --from=build /app/target/currencywebapp-0.0.1-SNAPSHOT.jar app.jar
+COPY --from=build /app/target/currencywebapp-1.0.0.jar app.jar
 
 # Exponer el puerto 8080 (o el puerto definido por la variable de entorno PORT)
 EXPOSE 8080
