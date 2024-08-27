@@ -1,26 +1,32 @@
-# Usar una imagen base de Maven para depuración
-FROM maven:3.9.4-eclipse-temurin-21 AS builder
+# Etapa de construcción
+FROM amazoncorretto:21-alpine-jdk AS build
 
-# Copiar el código fuente al contenedor
+# Instalar Maven
+RUN apk add --no-cache maven
+
+# Copiar el código fuente y el script mvnw al contenedor
 COPY . /app
 
 # Establecer el directorio de trabajo
 WORKDIR /app
 
-# Ejecutar Maven para compilar el proyecto
-RUN mvn clean package -DskipTests
+# Dar permisos de ejecución al script mvnw
+RUN chmod +x mvnw
 
-# Usar una imagen base de Amazon Corretto para el runtime
+# Ejecutar Maven para compilar el proyecto
+RUN ./mvnw clean package -DskipTests
+
+# Etapa de ejecución
 FROM amazoncorretto:21-alpine-jdk
 
-# Copiar el JAR construido del contenedor builder
-COPY --from=builder /app/target/currecyapp-0.0.1-SNAPSHOT.jar /currency_webapp.jar
+# Establecer el directorio de trabajo
+WORKDIR /app
 
-# Exponer el puerto 8080
+# Copiar el JAR generado desde la etapa de construcción
+COPY --from=build /app/target/*.jar app.jar
+
+# Exponer el puerto 8080 (o el puerto definido por la variable de entorno PORT)
 EXPOSE 8080
 
-# Copiar el JAR a un directorio accesible
-RUN mkdir /app && cp /currency_webapp.jar /app/
-
-# Usar una imagen interactiva para depuración
-ENTRYPOINT ["sh"]
+# Ejecutar la aplicación
+ENTRYPOINT ["java", "-jar", "app.jar"]
