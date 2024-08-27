@@ -14,7 +14,7 @@ WORKDIR /app
 RUN chmod +x mvnw
 
 # Ejecutar Maven para compilar el proyecto
-RUN ./mvnw clean package -DskipTests
+RUN ./mvnw spring-boot:run
 
 # Etapa de ejecución
 FROM amazoncorretto:21-alpine-jdk
