@@ -1,6 +1,6 @@
-package com.dahl.currecyapp.controller;
+package com.dahl.currencywebapp.controller;
 
-import com.dahl.currecyapp.service.ApiService;
+import com.dahl.currencywebapp.service.ApiService;
 import java.util.List;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

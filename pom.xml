@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.dahl</groupId>
-    <artifactId>currecyapp</artifactId>
+    <artifactId>currencywebapp</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>currecy_app</name>
+    <name>currency_webapp</name>
     <description>Demo project for Spring Boot</description>
     <url/>
     <licenses>
@@ -68,7 +68,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.dahl.currencyapp.CurrencyWebApplication</mainClass>
+                    <mainClass>com.dahl.currencywebapp.CurrencyWebApplication</mainClass>
                 </configuration>
             </plugin>
         </plugins>

@@ -1,4 +1,4 @@
-package com.dahl.currecyapp.pojo;
+package com.dahl.currencywebapp.pojo;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.LocalDateTime;

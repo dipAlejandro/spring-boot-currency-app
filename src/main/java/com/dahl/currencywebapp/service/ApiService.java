@@ -1,6 +1,6 @@
-package com.dahl.currecyapp.service;
+package com.dahl.currencywebapp.service;
 
-import com.dahl.currecyapp.pojo.CurrencyInfo;
+import com.dahl.currencywebapp.pojo.CurrencyInfo;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;

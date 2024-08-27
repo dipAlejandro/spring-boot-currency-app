@@ -1,10 +1,10 @@
-package com.dahl.currecyapp;
+package com.dahl.currencywebapp;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class CurrecyWebApplicationTests {
+class CurrencyWebApplicationTests {
 
 	@Test
 	void contextLoads() {

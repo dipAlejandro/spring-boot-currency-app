@@ -1,13 +1,13 @@
-package com.dahl.currecyapp;
+package com.dahl.currencywebapp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CurrecyWebApplication {
+public class CurrencyWebApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CurrecyWebApplication.class, args);
+		SpringApplication.run(CurrencyWebApplication.class, args);
 	}
 
 }
